@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(238, 247, 253);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;     
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#titulo-index {
+    background-color:#122673;
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: #ddd;
+}
+
+#img-uniube {
+    max-width: 70px;
+
+}
+
+nav {
+    background-color: #122673;
+    padding: 10px;
+    color: #ddd;
+}
+#menu-principal {
+    display: flex;        
+    gap: 20px;           
+    list-style: none;     
+    margin: 0;
+    padding: 0;
+}
+
+#menu-principal li a {
+    text-decoration: none; 
+    color: white;          
+    font-weight: bold;
+}
+
+
+#lista-saibamais {
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    margin: 10px;
+}
+
+
+.galeria {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.galeria td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: top;
+    background-color: #354fb541;
+    border: 1px solid #ddd;
+}
+
+.galeria img {
+    width: 250px;           
+    height: 180px;          
+    object-fit: cover;      
+    border-radius: 8px;    
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s; 
+}
+
+.galeria img:hover {
+    transform: scale(1.05); 
+}
+
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.form-contato div {
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-radio {
+    flex-direction: row !important;
+    gap: 10px;
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    background-color: lightgray;
+    width: 700px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #122673;
+    color: white;           
+    text-align: center;    
+    padding: 20px;          
+    margin-top: 10px;     
+    font-size: 0.9em;      
+}

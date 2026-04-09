@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="titulo-index">
+        <h1>Tecnologia No Brasil</h1>
+        <h2>RA: 1186388-1 - Peterson Honorato </h2>
+        <a href="https://www.uniube.br" target="_blank">
+        <img id="img-uniube" src="imagens/uniube-logo.png" alt="Logo Uniube">
+    </a>
+    </header>
+    <nav>
+        <ul id="menu-principal">
+            <li>
+                <p><a href="index.html" >Home</a></p>
+            </li>
+            <li>
+                <p><a href="links.html" >Saiba Mais</a></p>
+            </li>
+            <li>
+                <p><a href="imagens.html">Imagens</a></p>
+            </li>
+            <li>
+                <p><a href="fale_conosco.html">Fale Conosco</a></p>
+            </li>
+            <li>
+                <p><a href="https://uniube.br/" target="_blank">Uniube</a></p>
+            </li>
+            <li>
+                <p><a href="https://github.com/peterson2005" target="_blank">GitHub</a></p>
+            </li>
+            <li>
+                <p><a href="https://www.linkedin.com/in/peterson-honorato/" target="_blank">Linkedin</a></p>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Fale Conosco</h1>
+        <form action="#" method="post" class="form-contato">
+            <div>
+                <label>Nome:</label>
+                <input type="text" name="nome" required>
+            </div>
+
+            <div>
+                <label>Área de Interesse:</label>
+                <div class="opcoes-radio">
+                    <input type="radio" name="area" value="dev" checked> Dev
+                    <input type="radio" name="area" value="infra"> Infra
+                    <input type="radio" name="area" value="dados"> Dados
+                </div>
+            </div>
+
+            <div>
+                <label>Estado:</label>
+                <select name="estado">
+                    <option value="mg">Minas Gerais</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Mensagem:</label>
+                <textarea name="mensagem" rows="5"></textarea>
+            </div>
+
+            <button type="submit" style="padding: 10px; cursor: pointer;">Enviar</button>
+        </form>
+    </main>
+
+
+
+    <footer>
+        <p>&copy; 2026 Peterson Honorato - Tecnologia no Brasil. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
