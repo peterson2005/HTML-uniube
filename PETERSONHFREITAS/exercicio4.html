@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <header id="titulo-index">
+        <h1>JavaScript</h1>
+        <h2>RA: 1186388-1 - Peterson Honorato </h2>
+        <a href="https://www.uniube.br" target="_blank">
+            <img id="img-uniube" src="imagens/uniube-logo.png" alt="Logo Uniube">
+        </a>
+    </header>
+    <nav>
+        <ul id="menu-principal">
+            <li>
+                <p><a href="index.html">Home</a></p>
+            </li>
+            <li>
+                <p><a href="https://uniube.br/" target="_blank">Uniube</a></p>
+            </li>
+            <li>
+                <p><a href="https://github.com/peterson2005" target="_blank">GitHub</a></p>
+            </li>
+            <li>
+                <p><a href="https://www.linkedin.com/in/peterson-honorato/" target="_blank">Linkedin</a></p>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>4) Manipulação de Nomes</h1>
+        <button id="lista">Criar Lista</button>
+        <p id="resulist" style="margin-top: 20px; text-align: left; width: 100%;"></p>
+    </main>
+    <footer>
+        <p>&copy; 2026 Peterson Honorato - JavaScript. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script>
+    document.getElementById('lista').addEventListener('click', function () {
+        let qtd = parseInt(prompt("Informe a quantidade de nomes:"));
+        if (isNaN(qtd) || qtd <= 0) {
+            alert("Quantidade inválida!");
+            return;
+        }
+        let nomes = [];
+        for (let i = 0; i < qtd; i++) {
+            let nome = prompt("Informe o " + (i + 1) + "º nome:");
+            nomes.push(nome);
+        }
+        let ordemAlfabetica = [...nomes].sort();
+        let maiusculos = nomes.map(n => n.toUpperCase());
+
+        let output = "<strong>a) Quantidade de nomes digitados:</strong> " + nomes.length + "<br><br>" +
+            "<strong>b) Ordem em que foram digitados:</strong> " + nomes.join(", ") + "<br><br>" +
+            "<strong>c) Ordem alfabética:</strong> " + ordemAlfabetica.join(", ") + "<br><br>" +
+            "<strong>d) Nomes em Maiúsculo:</strong> " + maiusculos.join(", ");
+
+        document.getElementById('resulist').innerHTML = output;
+    });
+</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <header id="titulo-index">
+        <h1>JavaScript</h1>
+        <h2>RA: 1186388-1 - Peterson Honorato </h2>
+        <a href="https://www.uniube.br" target="_blank">
+            <img id="img-uniube" src="imagens/uniube-logo.png" alt="Logo Uniube">
+        </a>
+    </header>
+    <nav>
+        <ul id="menu-principal">
+            <li>
+                <p><a href="index.html">Home</a></p>
+            </li>
+            <li>
+                <p><a href="https://uniube.br/" target="_blank">Uniube</a></p>
+            </li>
+            <li>
+                <p><a href="https://github.com/peterson2005" target="_blank">GitHub</a></p>
+            </li>
+            <li>
+                <p><a href="https://www.linkedin.com/in/peterson-honorato/" target="_blank">Linkedin</a></p>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>3) Números Pares</h1>
+        <button id="calculo">Calcular Pares</button>
+        <p id="resulcalc" style="margin-top: 20px; text-align: left;"></p>
+    </main>
+    <footer>
+        <p>&copy; 2026 Peterson Honorato - JavaScript. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script>
+    document.getElementById('calculo').addEventListener('click', function () {
+        let numero;
+        do {
+            numero = parseInt(prompt("Digite um número maior que 0:"));
+            if (isNaN(numero) || numero <= 0) {
+                alert("Número inválido! Repita o número.");
+            }
+        } while (isNaN(numero) || numero <= 0);
+        let pares = [];
+        let soma = 0;
+
+        for (let i = 1; i <= numero; i++) {
+            if (i % 2 === 0) {
+                pares.push(i);
+                soma += i;
+            }
+        }
+        let output = "Você digitou o número " + numero + ".<br>" +
+            "Números pares: " + pares.join(", ") + ".<br>" +
+            "Quantidade de pares: " + pares.length + " números.<br>" +
+            "Soma dos pares: " + soma + ".";
+
+        document.getElementById('resulcalc').innerHTML = output;
+    });
+</script>
+</html>

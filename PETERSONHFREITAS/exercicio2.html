@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <header id="titulo-index">
+        <h1>JavaScript</h1>
+        <h2>RA: 1186388-1 - Peterson Honorato </h2>
+        <a href="https://www.uniube.br" target="_blank">
+            <img id="img-uniube" src="imagens/uniube-logo.png" alt="Logo Uniube">
+        </a>
+    </header>
+    <nav>
+        <ul id="menu-principal">
+            <li>
+                <p><a href="index.html">Home</a></p>
+            </li>
+            <li>
+                <p><a href="https://uniube.br/" target="_blank">Uniube</a></p>
+            </li>
+            <li>
+                <p><a href="https://github.com/peterson2005" target="_blank">GitHub</a></p>
+            </li>
+            <li>
+                <p><a href="https://www.linkedin.com/in/peterson-honorato/" target="_blank">Linkedin</a></p>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Exercicio 02.</h1>
+        <button id="verificar-mes">Escolher Mês</button>
+        <h3 id="resul-mes"></h3>
+    </main>
+    <footer>
+        <p>&copy; 2026 Peterson Honorato - JavaScript. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script>
+    const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    document.getElementById('verificar-mes').addEventListener('click', function () {
+        let entrada = prompt("Digite o número do mês (01 a 12):");
+        let n = parseInt(entrada);
+
+        if (n >= 1 && n <= 12) {
+            document.getElementById('resul-mes').innerText = entrada + " - " + meses[n - 1];
+        } else {
+            alert("Mês inválido! Digite entre 01 e 12.");
+        }
+    });
+</script>
+</html>
